@@ -1,9 +1,12 @@
 class Question
+
+  attr_reader :body, :answer
+
   def initialize
-    self.body, self.answer = self.generate_question
+    @body, @answer = self.generate_question
   end
 
-  private
+  protected
 
   def generate_question
     first = rand(1..20)
