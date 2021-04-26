@@ -32,7 +32,7 @@ Good bye!
 ## Plan
 ### Classes
 - player
-  - A player has a unique identifier (# or name), score, life
+  - A player has a unique identifier (# or name), score, lives
 - turn
   - A turn has an associated player, an associated question, a method for generating a question
 - question
