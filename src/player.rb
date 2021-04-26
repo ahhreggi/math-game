@@ -3,10 +3,11 @@ class Player
 
   attr_reader :id, :starting_lives, :score, :lives, :attempts
 
-  def initialize(id, starting_lives = 3)
+  # Initialize a player with the given id and initial number of lives
+  def initialize(id, initial_lives = 3)
     @id = id
-    @starting_lives = starting_lives
-    @lives = starting_lives
+    @starting_lives = initial_lives
+    @lives = initial_lives
     @score = 0
     @attempts = 0
   end
@@ -39,6 +40,6 @@ class Player
 
   # Return a string representation of the player's score and lives
   def to_s
-    "[ P#{self.id} ] Score: #{self.score}/#{self.attempts} | Lives: #{self.lives}/#{self.starting_lives}"
+    "[ P#{self.id} ] Score: #{self.score}/#{self.attempts} | Lives: #{self.lives}/#{self.initial_lives}"
   end
 end
