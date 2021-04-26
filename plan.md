@@ -36,6 +36,6 @@ Good bye!
 - turn
   - A turn has an associated player, an associated question, methods for generating a question instance
 - question
-  - A question has a question body, answer, methods for generating and displaying a question/answer
+  - A question has a question body, answer, methods for generating and displaying a question/answer, checking a given answer
 - game
   - A game has a status, two associated players, methods for determining status, prompting turns
