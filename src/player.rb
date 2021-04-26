@@ -1,25 +1,15 @@
 # A single player
 class Player
 
-  attr_reader :id, :starting_lives, :score, :lives, :attempts
+  attr_reader :id, :initial_lives, :score, :lives, :attempts
 
   # Initialize a player with the given id and initial number of lives
   def initialize(id, initial_lives = 3)
     @id = id
-    @starting_lives = initial_lives
+    @initial_lives = initial_lives
     @lives = initial_lives
     @score = 0
     @attempts = 0
-  end
-
-  # Add 1 to the player's score
-  def add_score
-    @score += 1
-  end
-
-  # Remove 1 life from the player
-  def remove_life
-    @lives -= 1
   end
 
   # Return true if the player has at least 1 life remaining, false otherwise
@@ -42,4 +32,17 @@ class Player
   def to_s
     "[ P#{self.id} ] Score: #{self.score}/#{self.attempts} | Lives: #{self.lives}/#{self.initial_lives}"
   end
+
+  protected
+
+  # Add 1 to the player's score
+  def add_score
+    @score += 1
+  end
+
+  # Remove 1 life from the player
+  def remove_life
+    @lives -= 1
+  end
+
 end

@@ -13,7 +13,7 @@ class Question
     self.answer === answer
   end
 
-  # Return a string representation of the question values
+  # Return the question as a formatted string
   def question
     num1, num2 = self.values
     "What does #{num1} plus #{num2} equal?"
