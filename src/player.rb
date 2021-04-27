@@ -40,7 +40,7 @@ class Player
 
   # Return a string representation of the player's id
   def label
-    "[ P#{self.id} ]"
+    "[ #{self.id} ]"
   end
 
   protected

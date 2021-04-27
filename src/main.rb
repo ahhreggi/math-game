@@ -3,8 +3,8 @@ require './game.rb'
 
 initial_lives = 3
 
-playerOne = Player.new(1, initial_lives)
-playerTwo = Player.new(2, initial_lives)
+playerOne = Player.new("Reggi", initial_lives)
+playerTwo = Player.new("Computer", initial_lives)
 
 game_settings = {
   min: 1,
