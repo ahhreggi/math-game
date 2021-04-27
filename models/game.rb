@@ -1,5 +1,5 @@
-require "./player.rb"
-require "./turn.rb"
+require_relative "./player.rb"
+require_relative "./turn.rb"
 
 # A Math game
 class Game
@@ -8,11 +8,11 @@ class Game
   # @param playerOne [Player] - A Player
   # @param playerTwo [Player] - A Player
   # @param settings [{max: Integer, min: Integer}] - Min/max values for question values
-  def initialize(playerOne, playerTwo, settings = {min: 1, max: 20})
+  def initialize(playerOne, playerTwo, min, max)
     @playerOne = playerOne
     @playerTwo = playerTwo
-    @min = settings[:min]
-    @max = settings[:max]
+    @min = min
+    @max = max
     @currentPlayer = rand(0..1) == 1 ? @playerOne : @playerTwo
   end
 
@@ -47,8 +47,8 @@ class Game
     end
 
     # Once the game ends, announce the current player as the winner
-    puts "#{currentPlayer.id} wins with a score of #{currentPlayer.score}"
-    puts "----- GAME OVER -----"
+    puts "#{currentPlayer.id} wins with a score of #{currentPlayer.score}!"
+    self.divider
     puts "Thanks for playing!"
   end
 

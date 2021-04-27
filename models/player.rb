@@ -4,7 +4,7 @@ class Player
   attr_reader :id
 
   # Initialize a player with the given id and initial number of lives
-  def initialize(id, initial_lives = 3)
+  def initialize(id, initial_lives)
     @id = id
     @initial_lives = initial_lives
     @lives = initial_lives

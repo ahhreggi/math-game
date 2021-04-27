@@ -2,11 +2,11 @@
 class Question
 
   # Initialize a question and its answer with the given min and max values
-  def initialize(min = 1, max = 20)
-    @values = self.generate_values
-    @answer = self.answer
+  def initialize(min, max)
     @min = min
     @max = max
+    @values = self.generate_values
+    @answer = self.answer
   end
 
   # Return true if the given answer is correct, false otherwise
@@ -22,23 +22,22 @@ class Question
 
   # Return the answer of the question
   def answer
-    add(*self.values)
+    add(*@values)
   end
 
   protected
 
   attr_reader :values, :min, :max
 
-  # Generate a question value pair
   def generate_values
-    first = generate_number(self.min, self.max)
-    second = generate_number(self.min, self.max)
+    first = get_random(@min, @max)
+    second = get_random(@min, @max)
     [first, second]
   end
 
-  # Return a random number within the given min and max values
-  def generate_number(min, max)
-    rand(1..20)
+  # Return a random number within the min and max values
+  def get_random(min, max)
+    rand(min..max)
   end
 
   # Return the sum of two given numbers

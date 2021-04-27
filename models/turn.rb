@@ -1,4 +1,4 @@
-require "./question.rb"
+require_relative "./question.rb"
 
 # A turn in a math game
 class Turn
