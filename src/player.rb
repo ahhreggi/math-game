@@ -1,4 +1,4 @@
-# A single player
+# A player in a math game
 class Player
 
   attr_reader :id
@@ -30,7 +30,12 @@ class Player
 
   # Return a string representation of the player's score and lives
   def score
-    "[ P#{self.id} ] Score: #{@score}/#{self.attempts} | Lives: #{self.lives}/#{self.initial_lives}"
+    "#{self.label} Score: #{@score}/#{self.attempts} | Lives: #{self.lives}/#{self.initial_lives}"
+  end
+
+  # Return a string representation of the player's id
+  def label
+    "[ P#{self.id} ]"
   end
 
   protected

@@ -1,3 +1,4 @@
+# A question in a turn
 class Question
 
   # Initialize a question and its answer with the given min and max values
@@ -10,7 +11,7 @@ class Question
 
   # Return true if the given answer is correct, false otherwise
   def is_correct?(answer)
-    self.answer === answer
+    self.answer.to_s == answer
   end
 
   # Return the question as a formatted string
