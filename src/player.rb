@@ -28,9 +28,14 @@ class Player
     end
   end
 
-  # Return a string representation of the player's score and lives
+  # Return a string representation of the player's score
   def score
-    "#{self.label} Score: #{@score}/#{self.attempts} | Lives: #{self.lives}/#{self.initial_lives}"
+    "#{@score}/#{self.attempts}"
+  end
+
+  # Return a string representation of the player's score and lives
+  def status
+    "#{self.label} Score: #{self.score} | Lives: #{self.lives}/#{self.initial_lives}"
   end
 
   # Return a string representation of the player's id

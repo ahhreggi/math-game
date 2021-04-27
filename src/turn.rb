@@ -4,9 +4,9 @@ require "./question.rb"
 class Turn
 
   # Initialize a question for the given Player
-  def initialize(player)
+  def initialize(player, min, max)
     @player = player
-    @question = Question.new
+    @question = Question.new(min, max)
   end
 
   # Prompt the player with the question and validate the answer
